@@ -1,5 +1,8 @@
 package l25hw1.busAppl;
-
+/*
+Создать класс Bus (автобус) - с полями номер маршрута, вместимость, скорость на маршруте, длина маршрута.
+Реализовать методы go, stop, speedUp, speedDown
+ */
 import l25hw1.model.Bus;
 
 public class BusAppl {
@@ -10,12 +13,14 @@ public class BusAppl {
         bus1.speedUp(20);
         bus1.speedDown(10);
         bus1.stop();
+        System.out.println();
 
         Bus bus2 = new Bus(188, 40, 70, 40);
         bus2.go();
         bus2.speedUp(15);
         bus2.speedDown(20);
         bus2.stop();
+        System.out.println();
 
         Bus bus3 = new Bus(217, 35, 70, 50);
         bus3.go();

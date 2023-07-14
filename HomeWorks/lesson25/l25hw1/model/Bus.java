@@ -46,11 +46,11 @@ public class Bus {
     }
 
     public void go() {
-        System.out.println("Bus " + routeNum + " is on the move.");
+        System.out.println("Bus " + routeNum + " is on the move with initial speed " + routeSpeed + " km/h.");
     }
 
     public void stop() {
-        System.out.println("Bus " + routeNum + " has stopped.");
+        System.out.println("Bus " + routeNum + " has stopped and drove the distance " + routeLength + " km to the final stop.");
     }
 
     public void speedUp(double speedIncrease ) {

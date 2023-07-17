@@ -1,65 +1,84 @@
 package l25hw2.model;
+/*
+Имеется список студентов с их фамилиями (задать внутри программы).
+Распределить студентов на 2 примерно равных группы (+/- 1 человек) случайным образом.
 
-import java.util.Arrays;
+сначала написать словами алгоритм того, как это будет делаться;
+реализовать алгоритм в коде;
+при реализации использовать метод(ы);
+создать тесты.
+ */
 import java.util.Random;
+public class Students {
+    private String surname;
 
-public class Students{
-    public static void main(String[] args) {
-        String[] studentList = createStudentList();
-
-        String[] group1 = distributeStudents(studentList);
-
-        // Формируем group2 из оставшихся студентов
-        String[] group2 = getRemainingStudents(studentList, group1);
-
-        // Выводим результаты
-        System.out.println("Группа 1:");
-        printArray(group1);
-
-        System.out.println("\nГруппа 2:");
-        printArray(group2);
+    public Students(String surname) {
+        this.surname = surname;
     }
 
-    public static String[] createStudentList() {
-        return new String[]{"Иванов", "Петров", "Сидоров", "Козлов", "Смирнов", "Васильев", "Морозов", "Николаев"};
+    public String getSurname() {
+        return surname;
     }
 
-    public static String[] distributeStudents(String[] studentList) {
-        // Перемешиваем список студентов
-        shuffleArray(studentList);
-
-        int totalStudents = studentList.length;
-        int groupSize = totalStudents / 2; // Размер каждой группы
-        int remainingStudents = totalStudents % 2; // Оставшиеся студенты, если число студентов нечетное
-
-        return Arrays.copyOf(studentList, groupSize + remainingStudents);
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public static String[] getRemainingStudents(String[] studentList, String[] group1) {
-        String[] remainingStudents = new String[studentList.length - group1.length];
-        int index = 0;
-        for (String student : studentList) {
-            if (!Arrays.asList(group1).contains(student)) {
-                remainingStudents[index] = student;
-                index++;
+    private static int getRandomStudentIndex(Students[] students, Random random) {
+        int index = random.nextInt(students.length);
+        while (students[index] == null) {
+            index = random.nextInt(students.length);
+        }
+        return index;
+    }
+
+    public static String[] splitStudents(Students[] students) {
+        int totalStudents = students.length;
+        int groupSize = totalStudents / 2;
+
+        Students[] group1 = new Students[groupSize];
+        Random random = new Random();
+
+        for (int i = 0; i < groupSize; i++) {
+            int index = getRandomStudentIndex(students, random);
+
+            group1[i] = students[index];
+            students[index] = null;
+        }
+
+        String[] group1Surnames = new String[groupSize];
+        for (int i = 0; i < groupSize; i++) {
+            group1Surnames[i] = group1[i].getSurname();
+        }
+
+        return group1Surnames;
+    }
+
+    public static String[] getOtherStudents(Students[] students, String[] group1) {
+        int totalStudents = students.length;
+        int remainingSize = totalStudents - group1.length;
+        String[] group2 = new String[remainingSize];
+        int group2Index = 0;
+
+        for (Students student : students) {
+            if (student != null && !isSurnameInGroup(student, group1)) {
+                group2[group2Index] = student.getSurname();
+                group2Index++;
             }
         }
-        return remainingStudents;
+
+        return group2;
     }
 
-    public static void shuffleArray(String[] array) {
-        Random random = new Random();
-        for (int i = array.length - 1; i > 0; i--) {
-            int index = random.nextInt(i + 1);
-            String temp = array[index];
-            array[index] = array[i];
-            array[i] = temp;
+    private static boolean isSurnameInGroup(Students student, String[] group) {
+        for (String member : group) {
+            if (student.getSurname().equals(member)) {
+                return true;
+            }
         }
+
+        return false;
     }
 
-    public static void printArray(String[] array) {
-        for (String item : array) {
-            System.out.println(item);
-        }
-    }
 }
+

@@ -16,7 +16,7 @@ public class FigureAppl {
     public static void main(String[] args) {
 
         Shape[] shapes = new Shape[4];
-        shapes[0] = (Shape) new Circle(5);
+        shapes[0] = (Shape) new Circle(10);
         shapes[1] = (Shape) new Circle(3);
         shapes[2] = (Shape) new Triangle(3, 4, 5);
         shapes[3] = (Shape) new Square(4);

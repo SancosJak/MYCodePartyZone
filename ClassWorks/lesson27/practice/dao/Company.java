@@ -9,7 +9,7 @@ public interface Company {
     Employee removeEmployee(int id); // удаляем сотрудника из компании увольнение
     Employee findEmployee(int id); // ищем сотруднка в компании по id
     int size(); // размер компании
-    void printEmployee(); // печатаем спсок компании
+    void printEmployees(); // печатаем спсок компании
 
 
 }

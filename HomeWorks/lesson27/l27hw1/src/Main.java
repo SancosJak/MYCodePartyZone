@@ -7,9 +7,9 @@ import java.util.Random;
  */
 public class Main {
     public static void main(String[] args) {
+
         int[] array = new int[100];
         Random random = new Random();
-
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(10) + 1;
         }
@@ -18,7 +18,6 @@ public class Main {
         System.out.println(Arrays.toString(array));
 
         int[] count = new int[11];
-
         for (int num : array) {
             count[num]++;
         }

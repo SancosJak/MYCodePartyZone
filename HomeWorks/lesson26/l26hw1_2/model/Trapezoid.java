@@ -17,8 +17,11 @@ public class Trapezoid extends Shape {
 
     @Override
     public double calcPerimeter() {
-        double side1 = Math.sqrt(Math.pow((sideB - side) / 2, 2) + h * h);
-        double side2 = Math.sqrt(Math.pow((sideB - side) / 2, 2) + h * h);
-        return side + sideB + side1 + side2;
+        double side1 = side;
+        double side2 = sideB;
+        double side3 = Math.sqrt(Math.pow((sideB - side) / 2, 2) + h * h);
+        double side4 = Math.sqrt(Math.pow((sideB - side) / 2, 2) + h * h);
+        return side1 + side2 + side3 + side4;
+        //return side + sideB + side1 + side2;
     }
 }

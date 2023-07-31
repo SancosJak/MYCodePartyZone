@@ -19,9 +19,9 @@ public class Car  implements Comparable <Car>{
     private String company;
     private double engine;
 
-    private int mileage; // New field for the mileage of the car
+    private double mileage; // New field for the mileage of the car
 
-    public Car(String model, String company, double engine, int mileage) {
+    public Car(String model, String company, double engine, double mileage) {
         this.model = model;
         this.company = company;
         this.engine = engine;
@@ -51,7 +51,8 @@ public class Car  implements Comparable <Car>{
     public void setEngine(double engine) {
         this.engine = engine;
     }
-    public int getMileage() {
+
+    public double getMileage() {
         return mileage;
     }
 
@@ -65,7 +66,7 @@ public class Car  implements Comparable <Car>{
                 "model='" + model + '\'' +
                 ", company='" + company + '\'' +
                 ", engine=" + engine +
-                ", mileage=" + mileage + // Include mileage in the output
+                ", mileage=" + mileage + // Include mileage
                 '}';
     }
 
@@ -74,12 +75,12 @@ public class Car  implements Comparable <Car>{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return Double.compare(car.engine, engine) == 0 && model.equals(car.model) && company.equals(car.company);
+        return Double.compare(car.engine, engine) == 0 && mileage == car.mileage && Objects.equals(model, car.model) && Objects.equals(company, car.company);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(model, company, engine);
+        return Objects.hash(model, company, engine, mileage);
     }
 
     @Override

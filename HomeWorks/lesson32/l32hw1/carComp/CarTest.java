@@ -11,10 +11,10 @@ class CarTest{
     @BeforeEach
     void setUp() {
         cars = new Car[]{
-                new Car( "S-Class", "Mercedes-Benz", 4.0, 150000),
-                new Car( "3 Series", "BMW", 3.0,205000),
-                new Car( "Model S", "Tesla", 0.0,12000),
-                new Car( "Aventador", "Lamborghini", 6.5, 280000),
+                new Car( "S-Class", "Mercedes-Benz", 4.0, 150000.8),
+                new Car( "3 Series", "BMW", 3.0,205089.7),
+                new Car( "Model S", "Tesla", 0.0,12000.6),
+                new Car( "Aventador", "Lamborghini", 6.5, 28500.6),
                 new Car( "911", "Porsche", 3.8, 145000)
         };
     }

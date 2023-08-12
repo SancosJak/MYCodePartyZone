@@ -22,4 +22,6 @@ public interface Company {
     Employee[] findEmployeesWithSalary(double amount);
 
     Employee[] findEmployeesWithoutHigherEducation();
+
+    void printEmployeeArray(Employee[] array);
 }

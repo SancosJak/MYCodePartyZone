@@ -12,13 +12,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 class CompanyImplTest {
+    //CompanyImpl company;
     Company company;
     Employee[] employees;
 
     @BeforeEach
     void setUp() {
         company = new CompanyImpl();
-        employees = new Employee[] {
+        employees = new Employee[]{
                 new Engineer("John", 1985, 10, "Higher", 25.0, 160),
                 new Engineer("Jane", 1990, 5, "Higher", 30.0, 150),
                 new Worker("Bob", 1992, 3, "Secondary", 10.0, 180),
@@ -35,6 +36,7 @@ class CompanyImplTest {
         assertFalse(company.hireEmployee(null)); // Попытка добавления null
         assertEquals(4, company.getEmployeeCount()); // Проверка количества сотрудников
     }
+
     @Test
     void testFireEmployee() {
         System.out.println(company.getEmployeeCount());
@@ -42,6 +44,7 @@ class CompanyImplTest {
         assertEquals("Bob", hiredEmployee.getName());
         System.out.println(company.getEmployeeCount());
     }
+
     @Test
     void testFindEmployee() {
         assertEquals(employees[1], company.findEmployee("Jane"));
@@ -70,6 +73,15 @@ class CompanyImplTest {
     void
     testGetEmployeesSortedByExperience() {
         Employee[] sortedEmployees = company.getEmployeesSortedByExperience();
+
+//        for (int i = 0; i < sortedEmployees.length; i++) {
+//            System.out.println(sortedEmployees[i]);
+//        }
+
+       // company.printEmployeeList();
+
+        company.printEmployeeArray(sortedEmployees);
+
         assertEquals("Bob", sortedEmployees[0].getName());
         assertEquals("Jane", sortedEmployees[1].getName());
         assertEquals("Alice", sortedEmployees[2].getName());

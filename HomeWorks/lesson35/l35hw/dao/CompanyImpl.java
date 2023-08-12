@@ -61,6 +61,11 @@ public class CompanyImpl implements Company {
             System.out.println(employees[i]);
         }
     }
+    public void printEmployeeArray(Employee[] array) {
+        for (Employee employee : array) {
+            System.out.println(employee);
+        }
+    }
     public Employee[] getEmployeesSortedByAge() {
         Employee[] sortedArray = Arrays.copyOf(employees, employeeCount);
         Arrays.sort(sortedArray, new EmployeeComparators.AgeComparator());

@@ -11,31 +11,47 @@ import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
 class AlbumImplTest {
     private Album album;
     private Photo photo1;
     private Photo photo2;
-    private Photo photo3;
 
     @BeforeEach
     void setUp() {
-        album = new AlbumImpl(10);
+        album = new AlbumImpl(4);
 
         photo1 = new Photo(1, 1, "Iron Man", "https://example.com/iron_man.jpg", LocalDateTime.now());
         photo2 = new Photo(1, 2, "Spider-Man", "https://example.com/spider_man.jpg", LocalDateTime.now());
-        photo3 = new Photo(2, 3, "Black Widow", "https://example.com/black_widow.jpg", LocalDateTime.now());
 
         album.addPhoto(photo1);
         album.addPhoto(photo2);
-        album.addPhoto(photo3);
+
+        album.addPhoto(new Photo(2, 3, "Black Widow", "https://example.com/black_widow.jpg", LocalDateTime.now()));
     }
 
     @Test
     void testAddPhoto() {
+        //Add photo success check
         Photo newPhoto = new Photo(3, 4, "Hulk", "https://example.com/hulk.jpg", LocalDateTime.now());
         assertTrue(album.addPhoto(newPhoto));
         assertEquals(4, album.size());
+
+        //test to add photo with the same photoId and albumId
+        assertFalse(album.addPhoto(newPhoto));
+
+        //Null photo check
+        assertFalse(album.addPhoto(null));
+        assertEquals(4, album.size());
+
+
+        // test add photo exceed capacity
+        Photo extraPhoto = new Photo(11, 1, "Extra Photo", "https://example.com/extraphoto.jpg", LocalDateTime.now());
+        assertFalse(album.addPhoto(extraPhoto));
+        assertEquals(4, album.size());
+
+        //test add photo duplicate photo
+        assertFalse(album.addPhoto(newPhoto));
+
     }
 
     @Test
@@ -62,6 +78,10 @@ class AlbumImplTest {
         Album emptyAlbum = new AlbumImpl(10);
         Photo[] photosFromEmptyAlbum = emptyAlbum.getAllPhotoFromAlbum(1);
         assertEquals(0, photosFromEmptyAlbum.length);
+
+//        Photo[] expectedPhotos = {photo1, photo2, null};
+//        Photo[] actualPhotos = album.getAllPhotoFromAlbum(1);
+//        assertArrayEquals(expectedPhotos, actualPhotos);
 
         Photo[] photosFromAlbum1 = album.getAllPhotoFromAlbum(1);
         assertEquals(2, photosFromAlbum1.length);

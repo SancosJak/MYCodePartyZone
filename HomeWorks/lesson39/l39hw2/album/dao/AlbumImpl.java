@@ -4,6 +4,7 @@ import album.model.Photo;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -24,12 +25,17 @@ public class AlbumImpl implements Album {
     }
     @Override
     public boolean addPhoto(Photo photo) {
-        if (photo == null || photos.length == size || getPhotoFromAlbum(photo.getPhotoId(),photo.getAlbumId()) !=null) {
+        if (photo == null || size >= photos.length || getPhotoFromAlbum(photo.getPhotoId(), photo.getAlbumId()) != null) {
             return false;
         }
 
         int index = Arrays.binarySearch(photos, 0, size, photo, comparator);
-        index = index >= 0 ? index : - index -1;
+        index = index >= 0 ? index : -index - 1;
+
+        if (index < size && photo.equals(photos[index])) {
+            return false;
+        }
+
         System.arraycopy(photos, index, photos, index + 1, size - index);
         photos[index] = photo;
         size++;
@@ -42,7 +48,7 @@ public class AlbumImpl implements Album {
         for (int i = 0; i < size; i++) {
             if (photos[i].getPhotoId() == photoId && photos[i].getAlbumId() == albumId) {
                 System.arraycopy(photos, i + 1, photos, i, size - i - 1);
-               photos[--size] = null;
+                photos[--size] = null;
                 return true;
             }
         }
@@ -58,6 +64,7 @@ public class AlbumImpl implements Album {
             }
         }
         return false;
+
 //        method from CW, replace and test also passed
 //        Photo photo = getPhotoFromAlbum(photoId, albumId); // нашли photo по двум id
 //        if (photo == null) {
@@ -121,20 +128,30 @@ public class AlbumImpl implements Album {
 //    }
 
 
-    @Override
-    public Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
-        Photo[] result = new Photo[size];
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            LocalDateTime photoDate = photos[i].getDate();
-            LocalDate photoLocalDate = photoDate.toLocalDate();
+//    @Override
+//    public Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
+//        Photo[] result = new Photo[size];
+//        int count = 0;
+//        for (int i = 0; i < size; i++) {
+//            LocalDateTime photoDate = photos[i].getDate();
+//            LocalDate photoLocalDate = photoDate.toLocalDate();
+//
+//            if (photoLocalDate.isAfter(dateFrom) && photoLocalDate.isBefore(dateTo.plusDays(1))) {
+//                result[count++] = photos[i];
+//            }
+//        }
+//        return Arrays.copyOf(result, count);
+//    }
+@Override
+public Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
+    Photo pattern = new Photo(0, Integer.MIN_VALUE, null, null, dateFrom.atStartOfDay());
+    int from = - Arrays.binarySearch(photos, 0, size, pattern, comparator) - 1;
 
-            if (photoLocalDate.isAfter(dateFrom) && photoLocalDate.isBefore(dateTo.plusDays(1))) {
-                result[count++] = photos[i];
-            }
-        }
-        return Arrays.copyOf(result, count);
-    }
+    pattern = new Photo(0, Integer.MAX_VALUE, null, null, LocalDateTime.of(dateTo, LocalTime.MAX));
+    int to = - Arrays.binarySearch(photos, from, size, pattern, comparator) - 1;
+
+    return  Arrays.copyOfRange(photos,from,to);
+}
 
     @Override
     public int size() {

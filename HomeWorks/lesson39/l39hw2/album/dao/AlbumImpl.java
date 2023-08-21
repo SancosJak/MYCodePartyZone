@@ -153,6 +153,7 @@ public Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
     return  Arrays.copyOfRange(photos,from,to);
 }
 
+
     @Override
     public int size() {
         return size;
@@ -166,5 +167,11 @@ public Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
             sb.append(photos[i].toString()).append("\n");
         }
         return sb.toString();
+    }
+    @Override
+    public Photo[] getAllPhotos() {
+        Photo[] allPhotos = new Photo[size];
+        System.arraycopy(photos, 0, allPhotos, 0, size);
+        return allPhotos;
     }
 }

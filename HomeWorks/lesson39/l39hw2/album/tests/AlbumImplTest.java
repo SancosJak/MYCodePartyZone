@@ -97,6 +97,12 @@ class AlbumImplTest {
     void testGetPhotoBetweenDate() {
         Photo[] photosBetweenDate = album.getPhotoBetweenDate(LocalDate.now().minusDays(1), LocalDate.now().plusDays(1));
         assertEquals(3, photosBetweenDate.length);
+
+        LocalDate startDate = LocalDate.of(2023, 8, 16);
+        LocalDate endDate = LocalDate.of(2023, 8, 18);
+
+        Photo[] result = album.getPhotoBetweenDate(startDate, endDate);
+        assertEquals(0, result.length);
     }
 
     @Test

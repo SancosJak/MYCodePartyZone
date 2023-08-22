@@ -47,7 +47,7 @@ public class AlbumAppl {
             AlbumMenu selectedOption = AlbumMenu.values()[choice-1];
 
             switch (selectedOption) {
-                case LIST:
+                case ALL_PHOTO_FROM_ALBUM:
                     System.out.println("Enter the album number for the photo::");
                     int getAllPhotoAlbumId = scanner.nextInt();
                     Photo[] photosFromAlbum = album.getAllPhotoFromAlbum(getAllPhotoAlbumId);
@@ -61,7 +61,7 @@ public class AlbumAppl {
                         }
                     }
                     break;
-                case ADD:
+                case ADD_PHOTO:
                     System.out.println("Enter the album number for the new photo:");
                     int albumId = scanner.nextInt();
                     System.out.println("Enter the photo's number:");
@@ -77,7 +77,7 @@ public class AlbumAppl {
                         System.out.println("Failed to add photo. Album is full.");
                     }
                     break;
-                case FIND:
+                case FIND_PHOTO:
                     System.out.println("Enter the album number for the photo:");
                     int findAlbumId = scanner.nextInt();
                     System.out.println("Enter the photo's number:");
@@ -89,7 +89,7 @@ public class AlbumAppl {
                         System.out.println("Photo with such number and album not found.");
                     }
                     break;
-                case REMOVE:
+                case REMOVE_PHOTO:
                     System.out.println("Enter the album number for the photo:");
                     int removeAlbumId = scanner.nextInt();
                     System.out.println("Enter the photo's number:");

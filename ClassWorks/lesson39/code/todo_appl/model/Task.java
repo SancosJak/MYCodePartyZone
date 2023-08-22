@@ -50,4 +50,8 @@ public class Task implements Comparable <Task>{
     public int compareTo(Task o) {
         return this.id - o.id;
     }
+
+    public static Task parseTaskFromString(String taskString) {
+        return new Task(taskString);
+    }
 }

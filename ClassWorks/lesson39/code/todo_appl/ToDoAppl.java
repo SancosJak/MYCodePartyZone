@@ -1,10 +1,14 @@
 package todo_appl;
+/*
+В приложении ToDoList сделать сохранение списка задач в файл
+и считывание задач из файла при начале работы приложения.
+ */
 
 import todo_appl.dao.ToDoListImpl;
 import todo_appl.model.Menu;
 import todo_appl.model.Task;
-
 import java.util.Scanner;
+
 
 public class ToDoAppl {
     public static Menu getMenuByItem(int item) {
@@ -94,6 +98,15 @@ public class ToDoAppl {
                     case EXIT:
                         // Exit
                         continueExecution = false;
+                        break;
+                    case SAVE_DATA:
+                        // save all data to file
+                        ToDoListImpl.saveToDoListToFile(toDoList);
+                        break;
+                    case READ_DATA:
+                        // read all data from file
+                        ToDoListImpl.loadToDoListFromFile(toDoList);
+                        System.out.println("Data loaded from file.");
                         break;
                 }
             } else {

@@ -2,6 +2,9 @@ package todo_appl.dao;
 
 import todo_appl.model.Task;
 
+import java.io.*;
+import java.util.Scanner;
+
 public class ToDoListImpl implements ToDoList {
 
     private Task[] tasks;
@@ -63,4 +66,52 @@ public class ToDoListImpl implements ToDoList {
     public int quantity() {
         return quantity;
     }
+
+    public Task[] getAllTasks() {
+        Task[] allTasks = new Task[quantity];
+        System.arraycopy(tasks, 0, allTasks, 0, quantity);
+        return allTasks;
+    }
+
+    public static void saveToDoListToFile(ToDoListImpl toDoList) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a file name to save the tasks: ");
+        String fileName = scanner.nextLine();
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            Task[] tasks = toDoList.getAllTasks();
+            for (Task task : tasks) {
+                if (task != null) {
+                    writer.write(task.toString());
+                    writer.newLine();
+                }
+            }
+            System.out.println("Tasks are saved to a file " + fileName);
+        } catch (IOException e) {
+            System.out.println("Error saving tasks: " + e.getMessage());
+        }
+    }
+    public static void loadToDoListFromFile(ToDoListImpl toDoList) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a file name to load tasks from: ");
+        String fileName = scanner.nextLine();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                Task task = Task.parseTaskFromString(line);
+                if (task != null) {
+                    toDoList.addTask(task);
+                }
+            }
+            System.out.println("Tasks are loaded from a file " + fileName);
+        } catch (IOException e) {
+            System.out.println("Error loading tasks: " + e.getMessage());
+        }
+    }
+
+    public static Task parseTaskFromString(String taskString) {
+        return new Task(taskString);
+    }
+
 }

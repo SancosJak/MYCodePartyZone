@@ -1,7 +1,7 @@
 package todo_appl.model;
 
 public enum Menu {
-    LIST(1), ADD(2), FIND (3), REMOVE(4), EXIT(5);
+    LIST(1), ADD(2), FIND (3), REMOVE(4), SAVE_DATA(5), READ_DATA(6), EXIT(7);
 
     private int menuItem;
 

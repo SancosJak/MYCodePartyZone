@@ -1,7 +1,10 @@
 package album.model;
-
+/*
+ Для приложения Album сделать Menu: List, Add, Find, Remove, Save, Exit
+ должно сохранять созданные Photo в файл построчно.
+ */
 public enum AlbumMenu {
-    LIST(1), ADD(2), FIND(3), REMOVE(4), SAVE(5), EXIT(6);
+    ALL_PHOTO_FROM_ALBUM(1), ADD_PHOTO(2), FIND_PHOTO(3), REMOVE_PHOTO(4), SAVE(5), EXIT(6);
 
     private int menuItem;
 

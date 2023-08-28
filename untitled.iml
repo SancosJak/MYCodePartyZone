@@ -6,17 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cube" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31/practice" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson32/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson32/l32hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson32/l32hw2" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson33/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson33/l33hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson34/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson34" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson35" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson35" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson11-20/lesson15" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson11-20/lesson16" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson11-20/lesson17" isTestSource="false" />
@@ -53,24 +42,35 @@
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson21-30/lesson28" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson21-30/lesson29" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson21-30/lesson30" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson36" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson36/l36hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson37/l37cw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson37/l37hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson38" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson38/l38hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson38/l38hw2" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson39/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson39/l39hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson40/l40cw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson39/l39hw2" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson40/l40hw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41/l41cw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41/l41hw1_2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson42/l42cw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson42/l42hw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson43/l43cw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson43/l43hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson31/practice" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson32/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson33/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson34/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson35" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson36" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson37/l37cw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson38" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson39/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson40/l40cw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson31" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson32/l32hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson32/l32hw2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson33/l33hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson34" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson35" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson36/l36hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson37/l37hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson38/l38hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson38/l38hw2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson39/l39hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson39/l39hw2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson40/l40hw1" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

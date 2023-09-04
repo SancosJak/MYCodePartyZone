@@ -73,6 +73,12 @@
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson39/l39hw2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson40/l40hw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson44/l44hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson45/l45cw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson45/l45hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson46/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson46/l46hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/WeatherBot/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/WeatherBotProbe" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

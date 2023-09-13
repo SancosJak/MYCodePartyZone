@@ -148,4 +148,55 @@ class MyLinkedListImplTest {
         assertEquals(1, myList.lastIndexOf("Element2"));
         assertEquals(-1, myList.lastIndexOf("Element3"));
     }
+
+    @Test
+    public void testReverseLinkedList() {
+        MyLinkedList linkedList = new MyLinkedListImpl();
+        linkedList.add("A");
+        linkedList.add("B");
+        linkedList.add("C");
+
+        MyLinkedList reversedList = linkedList.reverseLinkedList();
+
+        assertEquals("C", reversedList.get(0));
+        assertEquals("B", reversedList.get(1));
+        assertEquals("A", reversedList.get(2));
+    }
+
+    @Test
+    public void testReverseLinkedListWithStartIndex() {
+        MyLinkedList linkedList = new MyLinkedListImpl();
+        linkedList.add("A");
+        linkedList.add("B");
+        linkedList.add("C");
+
+        MyLinkedList reversedList = linkedList.reverseLinkedList(1);
+
+        assertEquals("B", reversedList.get(0));
+        assertEquals("A", reversedList.get(1));
+    }
+
+    @Test
+    public void testReverseLinkedListWithStartAndEndIndex() {
+
+        MyLinkedList linkedList = new MyLinkedListImpl();
+        linkedList.add("A");
+        linkedList.add("B");
+        linkedList.add("C");
+        linkedList.add("D");
+        linkedList.add("E");
+        linkedList.add("F");
+
+        assertThrows(IndexOutOfBoundsException.class, () -> myList.reverseLinkedList(-1, 3));
+        assertThrows(IndexOutOfBoundsException.class, () -> myList.reverseLinkedList(1, 10));
+
+        MyLinkedList reversedList = linkedList.reverseLinkedList(2, 4);
+
+        assertEquals("A", reversedList.get(0));
+        assertEquals("B", reversedList.get(1));
+        assertEquals("D", reversedList.get(2));
+        assertEquals("C", reversedList.get(3));
+        assertEquals("E", reversedList.get(4));
+        assertEquals("F", reversedList.get(5));
+    }
 }

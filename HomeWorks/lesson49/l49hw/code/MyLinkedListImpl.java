@@ -20,6 +20,11 @@ public class MyLinkedListImpl implements MyLinkedList {
             this.next = next;
         }
     }
+    public MyLinkedListImpl() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
 
     /**
      * Добавляет элемент в конец списка.
@@ -306,4 +311,78 @@ public class MyLinkedListImpl implements MyLinkedList {
         // Возвращаем найденный узел
         return current;
     }
+    @Override
+    public MyLinkedList reverseLinkedList() {
+        MyLinkedList reversedList = new MyLinkedListImpl();
+
+        Node current = tail;
+        while (current != null) {
+            reversedList.add(current.data);
+            current = current.prev;
+        }
+
+        return reversedList;
+    }
+
+    @Override
+    public MyLinkedList reverseLinkedList(int startIndex) {
+        if (startIndex < 0 || startIndex >= size) {
+            throw new IndexOutOfBoundsException("Invalid startIndex");
+        }
+
+        MyLinkedListImpl reversedList = new MyLinkedListImpl();
+        Node current = getNode(startIndex);
+
+        while (current != null) {
+            reversedList.add(current.data);
+            current = current.prev;
+        }
+
+        Node originalHead = getNode(0);
+        reversedList.tail.next = originalHead;
+        originalHead.prev = reversedList.tail;
+
+        return reversedList;
+    }
+    @Override
+    public MyLinkedList reverseLinkedList(int startIndex, int endIndex) {
+        // Проверяем валидность индексов
+        if (startIndex < 0 || endIndex > size || startIndex >= endIndex) {
+            throw new IndexOutOfBoundsException("Invalid startIndex or endIndex");
+        }
+
+        // Получаем узлы для начала и конца переворота
+        Node startNode = getNode(startIndex);
+        Node endNode = getNode(endIndex);
+
+        // Сохраняем узел, предшествующий стартовому
+        Node prevNode = startNode.prev;
+
+        // Переменная для хранения следующего узла
+        Node current = startNode;
+        Node next;
+
+        // Переворачиваем узлы между startIndex и endIndex
+        while (current != endNode) {
+            next = current.next;
+            current.next = current.prev;
+            current.prev = next;
+            current = next;
+        }
+
+        // Соединяем перевернутую часть с оригинальным списком
+        if (prevNode != null) {
+            prevNode.next = endNode.prev;
+        } else {
+            head = endNode.prev;
+        }
+
+        startNode.next = endNode;
+        if (endNode != null) {
+            endNode.prev = startNode;
+        }
+
+        return this;
+    }
+
 }

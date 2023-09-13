@@ -59,4 +59,10 @@ public interface MyLinkedList {
     // возвращает индекс последнего вхождения данных, либо -1, если такого нет
     // a->b->c->d->e->a lastIndexOf(a) -> 5   lastIndexOf(g) - -1
     int lastIndexOf(String data);
+
+    MyLinkedList reverseLinkedList();
+
+    MyLinkedList reverseLinkedList(int startIndex);
+
+    MyLinkedList reverseLinkedList(int startIndex, int endIndex);
 }

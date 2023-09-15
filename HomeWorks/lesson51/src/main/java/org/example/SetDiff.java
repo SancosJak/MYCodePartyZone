@@ -7,7 +7,19 @@ public class SetDiff {
     public static Set<Character> findSetDiff(Set<Character> set1, Set<Character> set2) {
 
         Set<Character> result = new HashSet<>(set1);
+
         result.removeAll(set2);
+
+        // Вариант 2: contains
+//         for (Character element : set1) {
+//             if (set2.contains(element)) {
+//                 result.remove(element);
+//             }
+//         }
+
+        // Вариант 3: addAll
+//         result.addAll(set1);
+//         result.removeAll(set2);
 
         return result;
     }

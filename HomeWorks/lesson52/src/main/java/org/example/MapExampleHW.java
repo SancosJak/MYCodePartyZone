@@ -29,7 +29,7 @@ public class MapExampleHW {
 
         heroPowers.remove("Captain America");
 
-        System.out.println("Iterating over Map entries:");
+        System.out.println("Map entries:");
 
         for (Map.Entry<String, Integer> entry : heroPowers.entrySet()) {
             String heroName = entry.getKey();

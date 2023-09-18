@@ -42,12 +42,6 @@
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson21-30/lesson28" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson21-30/lesson29" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson21-30/lesson30" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41/l41cw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41/l41hw1_2" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson42/l42cw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson42/l42hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson43/l43cw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson43/l43hw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson31/practice" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson32/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson33/code" isTestSource="false" />
@@ -58,7 +52,6 @@
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson38" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson39/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson31-40/lesson40/l40cw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson44/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson31" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson32/l32hw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson32/l32hw2" isTestSource="false" />
@@ -72,22 +65,29 @@
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson39/l39hw1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson39/l39hw2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson31-40/lesson40/l40hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson44/l44hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson45/l45cw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson45/l45hw1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson46/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson46/l46hw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/WeatherBot/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/WeatherBotProbe" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson47/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson47/l47hw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson48/l48cw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson48/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson49/l49cw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson49/l49hw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson50/l50cw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson51/l51cw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson50/l50hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson41/l41cw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson42/l42cw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson43/l43cw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson44/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson45/l45cw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson46/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson47/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson48/l48cw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson49/l49cw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson41-50/lesson50/l50cw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson41/l41hw1_2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson42/l42hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson43/l43hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson44/l44hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson45/l45hw1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson46/l46hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson47/l47hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson48/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson49/l49hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson50/l50hw" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

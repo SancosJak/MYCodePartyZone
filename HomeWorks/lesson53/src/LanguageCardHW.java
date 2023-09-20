@@ -21,7 +21,7 @@ public class LanguageCardHW {
 
         Random random = new Random();
 
-        //Program will run until you enter "exit"
+        // Program will run until you enter "exit"
         while (true) {
             ArrayList<String> keys = new ArrayList<>(wordMap.keySet());
             String randomKey = keys.get(random.nextInt(keys.size()));
@@ -38,10 +38,23 @@ public class LanguageCardHW {
                 System.out.println("Верно!");
             } else {
                 System.out.println("Неверно! Правильный ответ: " + correctAnswer);
-                mistakeCountMap.put(randomKey, mistakeCountMap.get(randomKey) + 1); //Increasing the number of incorrect answers for a given word
+                mistakeCountMap.put(randomKey, mistakeCountMap.get(randomKey) + 1); // Increasing the number of incorrect answers for a given word
+
+                //After the error, ask the user if they want to see the result or try to translate the word again
+                System.out.println("Хотите увидеть результат (введите 'результат') или попробовать перевести слово еще раз (введите 'повтор')?");
+                String choice = scanner.nextLine();
+
+                if (choice.equalsIgnoreCase("результат")) {
+                    System.out.println("Правильный перевод: " + correctAnswer);
+                } else {
+                    if (!choice.equalsIgnoreCase("повтор")) {
+                        System.out.println("Некорректный ввод. Попробуйте еще раз.");
+                    }
+                }
             }
         }
     }
+
 
     // new method
     public void practiceDifficultWords() {
@@ -64,7 +77,7 @@ public class LanguageCardHW {
         myCard.addWord("dog", "собака");
         myCard.addWord("hello", "привет");
 
-        System.out.println("Для завершения работы программы введите 'exit'.");
+        System.out.println("Для завершения работы программы и просмотра результатов введите 'exit'.");
 
         myCard.practice();
         myCard.practiceDifficultWords(); //Starting the practice of erroneous words

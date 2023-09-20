@@ -38,7 +38,7 @@ public class LanguageCardHW {
                 System.out.println("Верно!");
             } else {
                 System.out.println("Неверно! Правильный ответ: " + correctAnswer);
-                wrongAnswersMap.put(randomKey, wrongAnswersMap.get(randomKey) + 1);
+                wrongAnswersMap.put(randomKey, wrongAnswersMap.get(randomKey) + 1); //Increasing the number of incorrect answers for a given word
             }
         }
     }

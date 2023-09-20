@@ -49,12 +49,12 @@ public class LanguageCardHW {
             System.out.println("Нет ошибочных слов для практики.");
             return;
         }
+
+        System.out.println("Список слов для практики:");
         for (Map.Entry<String, Integer> entry : wrongAnswersMap.entrySet()) {
             String word = entry.getKey();
             int incorrectCount = entry.getValue();
-            if (incorrectCount > 0) {
-                System.out.println("Слово: " + word + ", Количество неправильных ответов: " + incorrectCount);
-            }
+            System.out.println("Слово: " + word + ", Количество неправильных ответов: " + incorrectCount);
         }
     }
 

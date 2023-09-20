@@ -2,7 +2,7 @@ import java.util.*;
 
 public class LanguageCardHW {
     private final HashMap<String, String> wordMap = new HashMap<>();
-    private final HashMap<String, Integer> wrongAnswersMap = new HashMap<>();//Storage for the number of incorrect
+    private final HashMap<String, Integer> mistakeCountMap = new HashMap<>();//Storage for the number of incorrect
     private final Scanner scanner; //Declaring Scanner as a Class Field
 
     public LanguageCardHW() {
@@ -10,7 +10,7 @@ public class LanguageCardHW {
     }
     public void addWord(String foreignWord, String nativeWord) {
         wordMap.put(foreignWord, nativeWord);
-        wrongAnswersMap.put(foreignWord, 0); //Initialize the number of incorrect answers for a new word with zero
+        mistakeCountMap.put(foreignWord, 0); //Initialize the number of incorrect answers for a new word with zero
     }
 
     public void practice() {
@@ -38,20 +38,20 @@ public class LanguageCardHW {
                 System.out.println("Верно!");
             } else {
                 System.out.println("Неверно! Правильный ответ: " + correctAnswer);
-                wrongAnswersMap.put(randomKey, wrongAnswersMap.get(randomKey) + 1); //Increasing the number of incorrect answers for a given word
+                mistakeCountMap.put(randomKey, mistakeCountMap.get(randomKey) + 1); //Increasing the number of incorrect answers for a given word
             }
         }
     }
 
     // new method
     public void practiceDifficultWords() {
-        if (wrongAnswersMap.isEmpty()) {
+        if (mistakeCountMap.isEmpty()) {
             System.out.println("Нет ошибочных слов для практики.");
             return;
         }
 
         System.out.println("Список слов для практики:");
-        for (Map.Entry<String, Integer> entry : wrongAnswersMap.entrySet()) {
+        for (Map.Entry<String, Integer> entry : mistakeCountMap.entrySet()) {
             String word = entry.getKey();
             int incorrectCount = entry.getValue();
             System.out.println("Слово: " + word + ", Количество неправильных ответов: " + incorrectCount);

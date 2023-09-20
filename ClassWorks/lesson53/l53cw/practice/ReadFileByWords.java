@@ -3,10 +3,7 @@ package practice;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class ReadFileByWords {
     public static void main(String[] args) {
@@ -26,13 +23,23 @@ public class ReadFileByWords {
 
     public static List<String> readFileByWords(String filename) {
         List<String> wordList = new ArrayList<>();
+        Set<String> uniqueWords = new HashSet<>(); // use SET
 
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
 
+//            while ((line = br.readLine()) != null) {
+//                String[] words = line.split("\\s+");  // Разделяем строку на слова по пробелам
+//                wordList.addAll(Arrays.asList(words));
+//            }
+
             while ((line = br.readLine()) != null) {
-                String[] words = line.split("\\s+");  // Разделяем строку на слова по пробелам
-                wordList.addAll(Arrays.asList(words));
+                String[] words = line.split("\\s+");
+                for (String word : words) {
+                    if (uniqueWords.add(word)) { // Check if the word is unique
+                        wordList.add(word);
+                    }
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

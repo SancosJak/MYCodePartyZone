@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Classwork {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class Classwork {
 
     // Задача 1: Найти максимальный элемент в списке.
     static void first() {
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> list = Arrays.asList(1, 20, 3, 4, 5);
 
         // С использованием цикла:
         int max = Integer.MIN_VALUE;
@@ -28,7 +29,10 @@ public class Classwork {
         System.out.println(max);  // Output: 5
 
         // решить с помощью mapToInt и max
-        int maxStream = Integer.MIN_VALUE;
+        int maxStream = list.stream()
+                .mapToInt(Integer::intValue)
+                .max()
+                .orElse(Integer.MIN_VALUE);
 
         System.out.println(maxStream);  // Output: 5
     }
@@ -48,7 +52,8 @@ public class Classwork {
         System.out.println(result.toString());  // Output: apple, banana, cherry
 
         // решить с помощью collect и Collectors.joining(", ")
-        String resultStream = null;
+        String resultStream = list.stream()
+                .collect(Collectors.joining(", "));
 
         System.out.println(resultStream);  // Output: apple, banana, cherry
     }
@@ -68,7 +73,7 @@ public class Classwork {
         System.out.println(found);  // Output: false
 
         // решить с помощью anyMatch
-        boolean foundStream = false;
+        boolean foundStream = list.stream().anyMatch(num -> num > 10);
 
         System.out.println(foundStream);  // Output: false
     }
@@ -86,7 +91,7 @@ public class Classwork {
         System.out.println(average);  // Output: 3.0
 
         // решить с помощью mapToInt, average, orElse
-        double averageStream = 0;
+        double averageStream = list.stream().mapToInt(Integer::intValue).average().orElse(0);
         System.out.println(averageStream);  // Output: 3.0
     }
 
@@ -102,7 +107,7 @@ public class Classwork {
         System.out.println(unique);  // Output: [1, 2, 3, 4, 5]
 
         // решить с помощью collect Collectors.toSet()
-        Set<Integer> uniqueStream = null;
+        Set<Integer> uniqueStream = list.stream().collect(Collectors.toSet());
         System.out.println(uniqueStream);  // Output: [1, 2, 3, 4, 5]
     }
 }

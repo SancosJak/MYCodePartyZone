@@ -25,7 +25,7 @@ public class AttendanceTrackerByTTest {
         attendanceTracker.addStudent("Alice");
         attendanceTracker.printStudentAttendance("Alice");
         String expectedOutput = "Student: Alice\n";
-        assertEquals(expectedOutput, outContent.toString());
+        assertEquals(expectedOutput.trim(), outContent.toString().trim());
     }
 
     @Test
@@ -33,7 +33,7 @@ public class AttendanceTrackerByTTest {
         attendanceTracker.addStudent("Alice");
         attendanceTracker.addLessonDate(LocalDate.of(2023, 10, 10));
         attendanceTracker.printStudentAttendance("Alice");
-        String expectedOutput = "Student: Alice\n2023-10-10: Missed\n";
+        String expectedOutput = "Student: Alice" + System.lineSeparator() + "2023-10-10: Missed" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -43,7 +43,7 @@ public class AttendanceTrackerByTTest {
         attendanceTracker.addLessonDate(LocalDate.of(2023, 10, 10));
         attendanceTracker.markAttendance("Alice", LocalDate.of(2023, 10, 10), true);
         attendanceTracker.printStudentAttendance("Alice");
-        String expectedOutput = "Student: Alice\n2023-10-10: Attended\n";
+        String expectedOutput = "Student: Alice" + System.lineSeparator() + "2023-10-10: Attended" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -53,14 +53,14 @@ public class AttendanceTrackerByTTest {
         attendanceTracker.addLessonDate(LocalDate.of(2023, 10, 10));
         attendanceTracker.markAttendance("Alice", LocalDate.of(2023, 10, 10), true);
         attendanceTracker.printAllAttendance();
-        String expectedOutput = "Student: Alice\n2023-10-10: Attended\n";
+        String expectedOutput = "Student: Alice" + System.lineSeparator() + "2023-10-10: Attended" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
     @Test
     void printStudentAttendance_noData() {
         attendanceTracker.printStudentAttendance("Bob");
-        String expectedOutput = "No data found for student: Bob\n";
+        String expectedOutput = "No data found for student: Bob" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 }

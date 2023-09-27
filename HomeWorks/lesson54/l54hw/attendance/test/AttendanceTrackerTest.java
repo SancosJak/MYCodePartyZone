@@ -53,7 +53,6 @@ class AttendanceTrackerTest {
     }
     @Test
     public void testPrintAllAttendance() {
-
         AttendanceTracker attendanceTracker = new AttendanceTracker();
 
         String studentName = "Iron Man";
@@ -71,10 +70,10 @@ class AttendanceTrackerTest {
 
         System.setOut(System.out);
 
-        String expectedOutput = "Посещаемость для ученика Iron Man:\n" +
-                "2023-07-01: посещено";
+        String expectedOutput = "Посещаемость для ученика Iron Man:" + System.lineSeparator() +
+                "2023-07-01: посещено" + System.lineSeparator();
 
-       // assertEquals(expectedOutput.trim(), outContent.toString().trim());
+        assertEquals(expectedOutput.trim(), outContent.toString().trim());
     }
 
     @Test

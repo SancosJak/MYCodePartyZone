@@ -63,4 +63,11 @@ public class AttendanceTrackerByTTest {
         String expectedOutput = "No data found for student: Bob" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
+    /*
+    fail: content have diff only in line separators
+
+    Разные платформы (Windows, macOS, Linux) могут использовать разные разделители строк, что может вызвать сбои в тестах.
+    Чтобы сделать тест независимым от платформы, можно использовать метод System.lineSeparator()
+    для создания ожидаемого вывода.
+     */
 }

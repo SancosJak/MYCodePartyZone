@@ -75,7 +75,7 @@ public class StreamHW {
                 .filter(i -> i % 2 == 0)
                 .count();
 
-        System.out.println("Stream:");
+        System.out.println("Stream");
         System.out.println(count1);
     }
 }

@@ -87,12 +87,6 @@
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson48/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson49/l49hw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson41-50/lesson50/l50hw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson54/l54hw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson55/l55hw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson56/l56hw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson57/l57hw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson58/l58hw" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson59/l59hw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson51-60/lesson51/l51cw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson51-60/lesson52/l52cw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson51-60/lesson53/l53cw" isTestSource="false" />
@@ -103,6 +97,13 @@
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson51-60/lesson58/l58cw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson51-60/lesson59/l59cw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson51-60/lesson60/l60cw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson51-60/lesson54/l54hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson51-60/lesson55/l55hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson51-60/lesson56/l56hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson51-60/lesson57/l57hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson51-60/lesson58/l58hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson51-60/lesson59/l59hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson51-60/lesson60/l60hw" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

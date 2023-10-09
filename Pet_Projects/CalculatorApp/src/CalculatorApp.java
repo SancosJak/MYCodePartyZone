@@ -4,11 +4,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CalculatorApp extends JFrame implements ActionListener {
-    private JTextField textField;
-    private JButton[] numberButtons;
-    private JButton[] functionButtons;
-    private JButton addButton, subButton, mulButton, divButton, eqButton, clrButton, dotButton;
-    private JPanel panel;
+    private final JTextField textField;
+    private final JButton[] numberButtons;
+    private final JButton[] functionButtons;
+    private final JButton addButton;
+    private final JButton subButton;
+    private final JButton mulButton;
+    private final JButton divButton;
+    private final JButton eqButton;
+    private final JButton clrButton;
+    private final JButton dotButton;
+    private final JPanel panel;
 
     private double num1, num2, result;
     private char operator;

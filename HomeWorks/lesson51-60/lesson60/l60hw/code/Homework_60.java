@@ -5,7 +5,7 @@ import practice.Classwork_60;
 public class Homework_60 {
     public static void main(String[] args) {
         Classwork_60 tasks = new Classwork_60();
-        tasks.task1();
+//        tasks.task1();
 //        tasks.task2();
 //        tasks.task3();
 //        tasks.task4();

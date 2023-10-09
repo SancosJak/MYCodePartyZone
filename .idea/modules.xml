@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Calculator/Calculator.iml" filepath="$PROJECT_DIR$/Calculator/Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EventCalendarApp/EventCalendarApp.iml" filepath="$PROJECT_DIR$/EventCalendarApp/EventCalendarApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW1/L10CW1.iml" filepath="$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW1/L10CW1.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW2/L10CW2.iml" filepath="$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW2/L10CW2.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW3/L10CW3.iml" filepath="$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW3/L10CW3.iml" />
@@ -107,7 +109,9 @@
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW2/L9HW2.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW2/L9HW2.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW3/L9HW3.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW3/L9HW3.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW4/L9HW4.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW4/L9HW4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NotepadApp/NotepadApp.iml" filepath="$PROJECT_DIR$/NotepadApp/NotepadApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/TicTacToe/TicTacToe.iml" filepath="$PROJECT_DIR$/TicTacToe/TicTacToe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToDoListApp/ToDoListApp.iml" filepath="$PROJECT_DIR$/ToDoListApp/ToDoListApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson11-20/lesson16/l16hw2/l16hw2.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson11-20/lesson16/l16hw2/l16hw2.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson11-20/lesson16/l16hw3/l16hw3.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson11-20/lesson16/l16hw3/l16hw3.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson11-20/lesson19/l19hw2/l19hw2.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson11-20/lesson19/l19hw2/l19hw2.iml" />

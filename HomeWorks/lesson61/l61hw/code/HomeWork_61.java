@@ -62,7 +62,7 @@ public class HomeWork_61 {
     private static Thread createDecrementingThread(int decrementTimes) {
 //        return new Thread(() -> {
 //            for (int i = 0; i < decrementTimes; i++) {
-//                counter.decrementAndGet();
+//                counter.d ecrementAndGet();
 //            }
 //        });
         return new Thread(() -> counter.addAndGet(-decrementTimes));

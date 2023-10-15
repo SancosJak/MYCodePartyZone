@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/CalculatorApp/CalculatorApp.iml" filepath="$PROJECT_DIR$/Pet_Projects/CalculatorApp/CalculatorApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pet_Projects/Employee/Employee.iml" filepath="$PROJECT_DIR$/Pet_Projects/Employee/Employee.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/EventCalendarApp/EventCalendarApp.iml" filepath="$PROJECT_DIR$/Pet_Projects/EventCalendarApp/EventCalendarApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW1/L10CW1.iml" filepath="$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW1/L10CW1.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW2/L10CW2.iml" filepath="$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW2/L10CW2.iml" />

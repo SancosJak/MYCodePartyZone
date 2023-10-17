@@ -110,6 +110,12 @@
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson62/l62hw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson63/l63cw" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HomeWorks/lesson63/l63hw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWorks/lesson64/l64cw" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cine/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CinemaManSys/cinemaProject" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CinemaManagementSystem-master/cinemaProject" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Movie-Database-main/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cinema-booking_project-master/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

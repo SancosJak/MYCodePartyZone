@@ -50,7 +50,6 @@ public class TicTacToeGame extends JFrame implements ActionListener {
     }
 
     private boolean checkForWin() {
-        // Проверяем горизонтальные, вертикальные и диагональные линии для победы
         for (int i = 0; i < 3; i++) {
             if (buttons[i][0].getText().equals(buttons[i][1].getText()) && buttons[i][0].getText().equals(buttons[i][2].getText()) && !buttons[i][0].getText().equals("")) {
                 return true;
@@ -69,7 +68,6 @@ public class TicTacToeGame extends JFrame implements ActionListener {
     }
 
     private boolean isBoardFull() {
-        // Проверяем, заполнена ли доска
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (buttons[i][j].getText().equals("")) {
@@ -81,7 +79,6 @@ public class TicTacToeGame extends JFrame implements ActionListener {
     }
 
     private void resetBoard() {
-        // Очищаем доску и начинаем новую игру
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 buttons[i][j].setText("");

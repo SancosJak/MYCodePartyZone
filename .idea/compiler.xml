@@ -7,9 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="CinemaSysHW" />
         <module name="lesson51" />
         <module name="Lesson50" />
         <module name="lesson52" />
+        <module name="CinemaSysManagment" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

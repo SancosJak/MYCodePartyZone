@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/CalculatorApp/CalculatorApp.iml" filepath="$PROJECT_DIR$/Pet_Projects/CalculatorApp/CalculatorApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/CinemaApp/CinemaApp.iml" filepath="$PROJECT_DIR$/Pet_Projects/CinemaApp/CinemaApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CinemaSysManagment.iml" filepath="$PROJECT_DIR$/CinemaSysManagment.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/Employee/Employee.iml" filepath="$PROJECT_DIR$/Pet_Projects/Employee/Employee.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/EventCalendarApp/EventCalendarApp.iml" filepath="$PROJECT_DIR$/Pet_Projects/EventCalendarApp/EventCalendarApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW1/L10CW1.iml" filepath="$PROJECT_DIR$/ClassWorks/lesson1-10/Lesson10/L10CW1/L10CW1.iml" />
@@ -111,6 +112,7 @@
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW2/L9HW2.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW2/L9HW2.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW3/L9HW3.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW3/L9HW3.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW4/L9HW4.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson1-10/Lesson9/L9HW4/L9HW4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson50.iml" filepath="$PROJECT_DIR$/Lesson50.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/NotepadApp/NotepadApp.iml" filepath="$PROJECT_DIR$/Pet_Projects/NotepadApp/NotepadApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/TicTacToeApp/TicTacToeApp.iml" filepath="$PROJECT_DIR$/Pet_Projects/TicTacToeApp/TicTacToeApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pet_Projects/ToDoListApp/ToDoListApp.iml" filepath="$PROJECT_DIR$/Pet_Projects/ToDoListApp/ToDoListApp.iml" />
@@ -131,6 +133,8 @@
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson21-30/lesson27/l27hw1/l27hw1.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson21-30/lesson27/l27hw1/l27hw1.iml" />
       <module fileurl="file://$PROJECT_DIR$/ClassWorks/lesson41-50/lesson41/l41cw1/l41cw1.iml" filepath="$PROJECT_DIR$/ClassWorks/lesson41-50/lesson41/l41cw1/l41cw1.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson41-50/lesson41/l41hw1_2/l41hw1_2.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson41-50/lesson41/l41hw1_2/l41hw1_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson51.iml" filepath="$PROJECT_DIR$/lesson51.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson52.iml" filepath="$PROJECT_DIR$/lesson52.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorks/lesson51-60/lesson53/lesson53.iml" filepath="$PROJECT_DIR$/HomeWorks/lesson51-60/lesson53/lesson53.iml" />
       <module fileurl="file://$PROJECT_DIR$/untitled.iml" filepath="$PROJECT_DIR$/untitled.iml" />
     </modules>

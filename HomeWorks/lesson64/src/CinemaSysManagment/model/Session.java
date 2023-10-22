@@ -5,7 +5,6 @@ import CinemaSysManagment.dao.IFilm;
 import CinemaSysManagment.dao.ISession;
 import CinemaSysManagment.dao.ITicket;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Session implements ISession {
@@ -20,7 +19,6 @@ public class Session implements ISession {
         this.cinemaHall = cinemaHall;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.tickets = new ArrayList<>();
     }
 
     public Session(IFilm film, ICinemaHall cinemaHall, String endTime) {
@@ -28,6 +26,7 @@ public class Session implements ISession {
         this.cinemaHall = cinemaHall;
         this.endTime = endTime;
     }
+
 
     public IFilm getFilm() {
         return film;

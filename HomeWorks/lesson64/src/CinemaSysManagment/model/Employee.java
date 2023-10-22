@@ -14,11 +14,19 @@ public class Employee implements IEmployee {
     private String position;
     private List<ISession> managedSessions;
 
-    public Employee(String username, String password, String position) {
+    // Дополнительные свойства
+    private String firstName;
+    private String lastName;
+    private String contactInfo;
+
+    public Employee(String username, String password, String position, String firstName, String lastName, String contactInfo) {
         this.username = username;
         this.password = password;
         this.position = position;
         this.managedSessions = new ArrayList<>();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.contactInfo = contactInfo;
     }
 
     @Override
@@ -58,18 +66,38 @@ public class Employee implements IEmployee {
 
     @Override
     public void addManagedSession(ISession session) throws YourCustomException {
-        // Проверка на максимальное количество управляемых сеансов
         if (managedSessions.size() >= MAX_MANAGED_SESSIONS) {
             throw new YourCustomException("Достигнуто максимальное количество управляемых сеансов.");
         }
-
-        // реализация добавления сеанса к управляемым сеансам
         managedSessions.add(session);
     }
 
     @Override
     public void removeManagedSession(ISession session) {
-        //  реализация удаления сеанса из управляемых сеансов
         managedSessions.remove(session);
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getContactInfo() {
+        return contactInfo;
+    }
+
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
     }
 }

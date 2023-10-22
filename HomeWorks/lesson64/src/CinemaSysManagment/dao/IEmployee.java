@@ -47,4 +47,16 @@ public interface IEmployee extends IUser {
      * @param session Сеанс, за который сотрудник перестает отвечать.
      */
     void removeManagedSession(ISession session);
+
+    String getFirstName();
+
+    void setFirstName(String firstName);
+
+    String getLastName();
+
+    void setLastName(String lastName);
+
+    String getContactInfo();
+
+    void setContactInfo(String contactInfo);
 }

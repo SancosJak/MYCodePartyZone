@@ -13,6 +13,12 @@ public class FilmManagement {
     public FilmManagement(List<Film> films) {
         this.films = films;
     }
+    public List<Film> getFilms() {
+        return films;
+    }
+    public void setFilms(List<Film> films) {
+        this.films = films;
+    }
 
     public void run() {
         while (true) {

@@ -8,12 +8,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order implements IOrder {
+    private static int nextOrderId = 1;
+    private int id;
     private List<ITicket> tickets;
+    private List<IProduct> products;
     private String status;
 
     public Order() {
+        this.id = nextOrderId++;
         this.tickets = new ArrayList<>();
-        this.status = "Новый"; // По умолчанию заказ имеет статус "Новый"
+        this.products = new ArrayList<>();
+        this.status = "Новый";
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public List<IProduct> getProducts() {
+        return products;
     }
 
     public List<ITicket> getTickets() {
@@ -53,6 +66,10 @@ public class Order implements IOrder {
 
     @Override
     public void addProduct(IProduct product, int quantity) {
-
     }
+    @Override
+    public void setProducts(List<IProduct> products) {
+        this.products = products;
+    }
+
 }

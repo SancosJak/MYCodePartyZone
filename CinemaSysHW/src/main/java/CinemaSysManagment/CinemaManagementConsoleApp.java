@@ -1,22 +1,17 @@
 package CinemaSysManagment;
 
-import CinemaSysManagment.model.Film;
-import CinemaSysManagment.model.Product;
-import CinemaSysManagment.model.Session;
+import CinemaSysManagment.dao.ICustomer;
+import CinemaSysManagment.dao.IEmployee;
+import CinemaSysManagment.model.Customer;
+import CinemaSysManagment.model.Employee;
 import CinemaSysManagment.role.AdminMenu;
 import CinemaSysManagment.role.ClientMenu;
 import CinemaSysManagment.role.EmployeeMenu;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class CinemaManagementConsoleApp {
-    private static List<Film> films = new ArrayList<>();
-    private static List<Session> sessions = new ArrayList<>();
-    private static List<Product> products = new ArrayList<>();
-
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
 
@@ -46,22 +41,32 @@ public class CinemaManagementConsoleApp {
         } while (userTypeChoice < 1 || userTypeChoice > 3);
 
         switch (userTypeChoice) {
-            case 1:
+            case 1 -> {
                 AdminMenu adminMenu = new AdminMenu();
                 if (adminMenu.authenticate()) {
                     adminMenu.run();
                 } else {
                     System.out.println(ANSI_RED + "Неверное имя пользователя или пароль." + ANSI_RESET);
                 }
-                break;
-            case 2:
-                EmployeeMenu employeeMenu = new EmployeeMenu();
-                // Аналогично для сотрудника
-                break;
-            case 3:
-                ClientMenu clientMenu = new ClientMenu();
-                // Аналогично для клиента
-                break;
+            }
+            case 2 -> {
+                IEmployee employee = new Employee("employeeName", "employeePassword", "employeePosition", "employeeFirstName", "employeeLastName", "employeeContactInfo");
+                EmployeeMenu employeeMenu = new EmployeeMenu(employee);
+                if (employeeMenu.authenticate()) {
+                    employeeMenu.run();
+                } else {
+                    System.out.println(ANSI_RED + "Неверное имя пользователя или пароль." + ANSI_RESET);
+                }
+            }
+            case 3 -> {
+                ICustomer customer = new Customer("clientName", "clientPassword");
+                ClientMenu clientMenu = new ClientMenu(customer);
+                if (clientMenu.authenticate()) {
+                    clientMenu.run();
+                } else {
+                    System.out.println(ANSI_RED + "Неверное имя пользователя или пароль." + ANSI_RESET);
+                }
+            }
         }
     }
 }

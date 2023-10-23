@@ -50,4 +50,8 @@ public interface ICinemaHall {
      * @param hallType Новый тип кинозала.
      */
     void setHallType(CinemaHall.HallType hallType);
+    void decreaseCapacity(int amount);
+    void increaseCapacity(int amount);
+    int getNumRows();
+    int getSeatsPerRow();
 }

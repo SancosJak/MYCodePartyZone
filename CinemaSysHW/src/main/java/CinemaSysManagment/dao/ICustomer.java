@@ -9,6 +9,8 @@ import java.util.List;
  */
 public interface ICustomer extends IUser {
 
+    String getFirstName();
+
     /**
      * Забронировать билет на указанный сеанс.
      *

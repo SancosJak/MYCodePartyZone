@@ -60,4 +60,6 @@ public interface ITicket {
      * @param status Статус для этого билета.
      */
     void setStatus(String status);
+
+    void setReturned(boolean b);
 }

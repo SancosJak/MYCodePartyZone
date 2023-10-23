@@ -55,4 +55,6 @@ public interface IOrder {
     void pay();
 
     void addProduct(IProduct product, int quantity);
+    List<IProduct> getProducts();
+    void setProducts(List<IProduct> products);
 }

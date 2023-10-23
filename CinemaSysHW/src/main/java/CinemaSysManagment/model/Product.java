@@ -8,11 +8,17 @@ public class Product implements IProduct {
     private String description;
     private int stockQuantity;
 
+
     public Product(String name, double price, String description, int stockQuantity) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.stockQuantity = stockQuantity;
+    }
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
     }
 
     public String getName() {
@@ -58,4 +64,6 @@ public class Product implements IProduct {
             stockQuantity += quantity;
         }
     }
+
+
 }

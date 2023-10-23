@@ -87,4 +87,6 @@ public interface ISession {
     void addBookedTicket(ITicket ticket);
 
     boolean isBookingAvailable();
+    int getId();
+    List<ITicket> getSoldTickets();
 }

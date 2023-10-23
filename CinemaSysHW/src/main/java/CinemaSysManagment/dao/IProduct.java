@@ -74,4 +74,5 @@ public interface IProduct {
      * @param quantity Количество продукта, которое следует добавить на склад.
      */
     void increaseStock(int quantity);
+
 }

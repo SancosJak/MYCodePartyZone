@@ -28,8 +28,10 @@ public class AdminMenu {
 
             if (ADMIN_USERNAME.equals(adminUsername) && ADMIN_PASSWORD.equals(adminPassword)) {
                 authenticated = true;
+                Logger.log("Администратор " + adminUsername + " вошел в систему.");
                 System.out.println("Вход выполнен успешно.");
             } else {
+                Logger.log("Попытка неудачного входа администратора " + adminUsername);
                 System.out.println(RED_COLOR + "Неверное имя пользователя или пароль. Пожалуйста, повторите ввод." + RESET_COLOR);
             }
         }
@@ -92,7 +94,11 @@ public class AdminMenu {
                     employeeManagement.run();
                     break;
                 case 7:
-
+                    filmManagement = new FilmManagement(new ArrayList<>());
+                    sessionManagement = new SessionManagement(new ArrayList<>());
+                    productManagement = new ProductManagement(new ArrayList<>());
+                    DataManagement dataManagement = new DataManagement(filmManagement, sessionManagement, productManagement);
+                    dataManagement.run();
                     break;
                 case 8:
                     exitRequested = true;

@@ -1,0 +1,2 @@
+Post{postId=1, title='Title 1', author='Author 1', content='Content 1', date=2023-09-04T21:15:01.527364400, likes=44}
+Post{postId=2, title='Title 2', author='Author 2', content='Content 2', date=2023-09-04T21:15:01.548394100, likes=90}

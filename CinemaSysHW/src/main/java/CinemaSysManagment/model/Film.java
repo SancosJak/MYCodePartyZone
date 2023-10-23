@@ -24,6 +24,10 @@ public class Film implements IFilm {
         this.duration = duration;
     }
 
+    public Film(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

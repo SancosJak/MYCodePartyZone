@@ -40,8 +40,12 @@ public class Customer implements ICustomer {
     }
 
     @Override
+    public String getFirstName() {
+        return null;
+    }
+
+    @Override
     public ITicket bookTicket(ISession session) throws YourCustomException {
-        //  реализация бронирования билета
         if (session.isBookingAvailable()) {
             ITicket ticket = new Ticket(session);
             session.addBookedTicket(ticket);
@@ -54,7 +58,6 @@ public class Customer implements ICustomer {
 
     @Override
     public IOrder purchaseProduct(IProduct product, int quantity) throws YourCustomException {
-        //  реализация покупки продукта
         if (product.getStockQuantity() >= quantity) {
             IOrder order = new Order();
             order.addProduct(product, quantity);

@@ -5,6 +5,7 @@ import CinemaSysManagment.dao.IFilm;
 import CinemaSysManagment.dao.ISession;
 import CinemaSysManagment.dao.ITicket;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Session implements ISession {
@@ -13,6 +14,8 @@ public class Session implements ISession {
     private String startTime;
     private String endTime;
     private List<ITicket> tickets;
+    private int id;
+    private List<ITicket> soldTickets;
 
     public Session(IFilm film, ICinemaHall cinemaHall, String startTime, String endTime) {
         this.film = film;
@@ -25,6 +28,13 @@ public class Session implements ISession {
         this.film = film;
         this.cinemaHall = cinemaHall;
         this.endTime = endTime;
+    }
+    public Session() {
+        soldTickets = new ArrayList<>();
+    }
+
+    public void addSoldTicket(ITicket ticket) {
+        soldTickets.add(ticket);
     }
 
 
@@ -99,5 +109,13 @@ public class Session implements ISession {
     @Override
     public boolean isBookingAvailable() {
         return false;
+    }
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public List<ITicket> getSoldTickets() {
+        return soldTickets;
     }
 }

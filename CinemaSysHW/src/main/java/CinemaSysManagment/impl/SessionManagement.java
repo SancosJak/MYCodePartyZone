@@ -28,16 +28,26 @@ public class SessionManagement {
         this.films = films;
         this.cinemaHalls = cinemaHalls;
     }
+    public List<Session> getSessions() {
+        return sessions;
+    }
 
-    private List<IFilm> getAvailableFilms() {
+    public void setSessions(List<Session> sessions) {
+        this.sessions = sessions;
+    }
+    public List<IFilm> getAvailableFilms() {
         List<IFilm> availableFilms = new ArrayList<>();
-        availableFilms.addAll(films);
+        if (films != null) {
+            availableFilms.addAll(films);
+        }
         return availableFilms;
     }
 
-    private List<ICinemaHall> getAvailableCinemaHalls() {
+    public List<ICinemaHall> getAvailableCinemaHalls() {
         List<ICinemaHall> availableCinemaHalls = new ArrayList<>();
-        availableCinemaHalls.addAll(cinemaHalls);
+        if (cinemaHalls != null) {
+            availableCinemaHalls.addAll(cinemaHalls);
+        }
         return availableCinemaHalls;
     }
 
@@ -71,7 +81,9 @@ public class SessionManagement {
             switch (adminSessionChoice) {
                 case 1:
                     try {
-                        addSession();
+                        List<IFilm> availableFilms = getAvailableFilms();
+                        List<ICinemaHall> availableCinemaHalls = getAvailableCinemaHalls();
+                        addSession(availableFilms, availableCinemaHalls);
                     } catch (Exception e) {
                         System.out.println(RED_COLOR + "Ошибка при добавлении сеанса: " + e.getMessage() + RESET_COLOR);
                     }
@@ -101,11 +113,8 @@ public class SessionManagement {
         }
     }
 
-    private void addSession() {
+    public void addSession(List<IFilm> availableFilms, List<ICinemaHall> availableCinemaHalls) {
         Scanner scanner = new Scanner(System.in);
-
-        List<IFilm> availableFilms = getAvailableFilms();
-        List<ICinemaHall> availableCinemaHalls = getAvailableCinemaHalls();
 
         System.out.println("Доступные фильмы:");
         for (int i = 0; i < availableFilms.size(); i++) {
@@ -113,7 +122,7 @@ public class SessionManagement {
             System.out.println((i + 1) + ". " + film.getName());
         }
 
-        System.out.println("Введите номер выбранного фильма:");
+        System.out.print("Введите номер выбранного фильма: ");
         int filmChoice = scanner.nextInt();
 
         if (filmChoice < 1 || filmChoice > availableFilms.size()) {
@@ -127,7 +136,7 @@ public class SessionManagement {
             System.out.println((i + 1) + ". " + cinemaHall.getHallNumber());
         }
 
-        System.out.println("Введите номер выбранного кинозала:");
+        System.out.print("Введите номер выбранного кинозала: ");
         int cinemaHallChoice = scanner.nextInt();
         scanner.nextLine();
 
@@ -139,9 +148,9 @@ public class SessionManagement {
         IFilm film = availableFilms.get(filmChoice - 1);
         ICinemaHall cinemaHall = availableCinemaHalls.get(cinemaHallChoice - 1);
 
-        System.out.println("Введите время начала сеанса (например, '15:00'):");
+        System.out.print("Введите время начала сеанса (например, '15:00'): ");
         String startTime = scanner.nextLine();
-        System.out.println("Введите время окончания сеанса (например, '17:00'):");
+        System.out.print("Введите время окончания сеанса (например, '17:00'): ");
         String endTime = scanner.nextLine();
 
         Session newSession = new Session(film, cinemaHall, startTime, endTime);
@@ -149,7 +158,7 @@ public class SessionManagement {
         System.out.println("Сеанс успешно добавлен.");
     }
 
-    private void deleteSession() {
+    public void deleteSession() {
         Scanner scanner = new Scanner(System.in);
         boolean validInput = false;
 
@@ -172,7 +181,7 @@ public class SessionManagement {
         } while (!validInput);
     }
 
-    private void editSession() {
+    public void editSession() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите номер сеанса для редактирования: ");
@@ -276,3 +285,4 @@ public class SessionManagement {
     }
 }
 //TODO need to realize timeEndSession = startFilmSessionTime + getFilmDuration
+//TODO change addSession logic

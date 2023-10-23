@@ -12,7 +12,12 @@ public class ProductManagement {
     public ProductManagement(List<Product> products) {
         this.products = products;
     }
-
+    public List<Product> getProducts() {
+        return products;
+    }
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
     public void run() {
         while (true) {
             System.out.println("Управление продуктами:");
@@ -61,7 +66,7 @@ public class ProductManagement {
         }
     }
 
-    private void addProduct() {
+    public void addProduct() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите название продукта: ");
@@ -82,7 +87,7 @@ public class ProductManagement {
         System.out.println("Продукт успешно добавлен.");
     }
 
-    private void deleteProduct() {
+    public void deleteProduct() {
         Scanner scanner = new Scanner(System.in);
         boolean validInput = false;
 
@@ -100,7 +105,7 @@ public class ProductManagement {
         } while (!validInput);
     }
 
-    private void editProduct() {
+    public void editProduct() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите номер продукта для редактирования: ");
@@ -163,7 +168,7 @@ public class ProductManagement {
         }
     }
 
-    private void viewAllProducts() {
+    public void viewAllProducts() {
         if (products.isEmpty()) {
             System.out.println("Список продуктов пуст.");
         } else {

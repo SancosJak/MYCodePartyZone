@@ -8,12 +8,25 @@ public class Ticket implements ITicket {
     private int seatNumber;
     private double price;
     private String status;
+    private boolean returned;
 
     public Ticket(ISession session, int seatNumber, double price, String status) {
         this.session = session;
         this.seatNumber = seatNumber;
         this.price = price;
         this.status = status;
+    }
+
+    public Ticket(boolean returned) {
+        this.returned = returned;
+    }
+
+    public boolean isReturned() {
+        return returned;
+    }
+
+    public void setReturned(boolean returned) {
+        this.returned = returned;
     }
 
     public Ticket(ISession session) {

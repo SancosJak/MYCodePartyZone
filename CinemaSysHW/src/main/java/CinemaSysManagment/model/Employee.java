@@ -14,7 +14,6 @@ public class Employee implements IEmployee {
     private String position;
     private List<ISession> managedSessions;
 
-    // Дополнительные свойства
     private String firstName;
     private String lastName;
     private String contactInfo;

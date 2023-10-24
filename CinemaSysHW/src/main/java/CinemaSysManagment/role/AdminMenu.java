@@ -102,6 +102,7 @@ public class AdminMenu {
                     break;
                 case 8:
                     exitRequested = true;
+                    Logger.log("Администратор вышел из системы.");
                     break;
                 default:
                     System.out.println(RED_COLOR + "Некорректный выбор. Пожалуйста, введите число от 1 до 5." + RESET_COLOR);

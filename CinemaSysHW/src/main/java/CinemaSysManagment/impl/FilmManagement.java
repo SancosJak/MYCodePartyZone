@@ -1,6 +1,7 @@
 package CinemaSysManagment.impl;
 
 import CinemaSysManagment.model.Film;
+import CinemaSysManagment.role.Logger;
 
 import java.util.List;
 import java.util.Scanner;
@@ -82,6 +83,7 @@ public class FilmManagement {
                     Film newFilm = new Film(name, duration, genre, rating, description, language);
                     films.add(newFilm);
                     System.out.println("Фильм успешно добавлен.");
+                    Logger.log("Добавлен новый фильм: " + name);
                 } else {
                     System.out.println(RED_COLOR + "Некорректные данные фильма. Пожалуйста, повторите ввод." + RESET_COLOR);
                 }
@@ -109,6 +111,7 @@ public class FilmManagement {
                 validInput = true;
                 Film deletedFilm = films.remove(filmNumber - 1);
                 System.out.println("Фильм '" + deletedFilm.getName() + "' успешно удален.");
+                Logger.log("Удален фильм: " + deletedFilm.getName());
             } else {
                 System.out.println(RED_COLOR + "Некорректный номер фильма. Пожалуйста, повторите ввод." + RESET_COLOR);
             }

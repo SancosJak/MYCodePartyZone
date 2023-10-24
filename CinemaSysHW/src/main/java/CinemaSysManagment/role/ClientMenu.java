@@ -89,6 +89,7 @@ public class ClientMenu {
                     break;
                 case 6:
                     exitRequested = true;
+                    Logger.log("Клиент вышел из системы.");
                     break;
                 default:
                     System.out.println("Некорректный выбор. Пожалуйста, введите число от 1 до 6.");
@@ -195,6 +196,7 @@ public class ClientMenu {
         if ("да".equalsIgnoreCase(paymentChoice)) {
             order.setStatus("Оплачен");
             System.out.println("Билеты успешно оплачены.");
+            Logger.log("Клиент купил билеты.");
         } else {
             System.out.println("Оплата отменена.");
         }
@@ -281,6 +283,7 @@ public class ClientMenu {
         // TODO return money for ticket
 
         System.out.println("Билет успешно возвращен.");
+        Logger.log("Клиент вернул билеты.");
     }
 
     private void viewSeatStatus() {

@@ -57,7 +57,7 @@ public class FilmManagement {
         }
     }
 
-    private void addFilm() {
+    public void addFilm() {
         Scanner scanner = new Scanner(System.in);
         boolean validInput = false;
 
@@ -92,7 +92,7 @@ public class FilmManagement {
         } while (!validInput);
     }
 
-    private void deleteFilm() {
+    public void deleteFilm() {
         Scanner scanner = new Scanner(System.in);
         boolean validInput = false;
 
@@ -115,7 +115,7 @@ public class FilmManagement {
         } while (!validInput);
     }
 
-    private void viewAllFilms() {
+    public void viewAllFilms() {
         if (films.isEmpty()) {
             System.out.println(RED_COLOR + "Список фильмов пуст." + RESET_COLOR);
         } else {

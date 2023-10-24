@@ -12,6 +12,9 @@ public class EmployeeManagement {
     public EmployeeManagement(List<IEmployee> employees) {
         this.employees = employees;
     }
+    public List<IEmployee> getEmployees() {
+        return employees;
+    }
 
     public void run() {
         while (true) {
@@ -57,7 +60,7 @@ public class EmployeeManagement {
         }
     }
 
-    private void addEmployee() {
+    public void addEmployee() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите имя сотрудника: ");
         String firstName = scanner.nextLine();
@@ -77,7 +80,7 @@ public class EmployeeManagement {
         System.out.println("Сотрудник успешно добавлен.");
     }
 
-    private void deleteEmployee() {
+    public void deleteEmployee() {
         Scanner scanner = new Scanner(System.in);
         boolean validInput = false;
 
@@ -100,7 +103,7 @@ public class EmployeeManagement {
         } while (!validInput);
     }
 
-    private void viewEmployees() {
+    public void viewEmployees() {
         if (employees.isEmpty()) {
             System.out.println("Список сотрудников пуст.");
         } else {

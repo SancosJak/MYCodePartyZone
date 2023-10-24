@@ -14,6 +14,9 @@ public class HallManagement {
     public HallManagement(List<CinemaHall> halls) {
         this.halls = halls;
     }
+    public List<CinemaHall> getHalls() {
+        return halls;
+    }
 
     public void run() {
         int adminHallChoice = 0;
@@ -63,7 +66,7 @@ public class HallManagement {
         }
     }
 
-    private void addHall() {
+    public void addHall() {
         Scanner scanner = new Scanner(System.in);
         boolean validInput = false;
 
@@ -108,7 +111,7 @@ public class HallManagement {
         } while (!validInput);
     }
 
-    private void deleteHall() {
+    public void deleteHall() {
         Scanner scanner = new Scanner(System.in);
         boolean validInput = false;
 
@@ -138,7 +141,7 @@ public class HallManagement {
         } while (!validInput);
     }
 
-    private void viewAllHalls() {
+    public void viewAllHalls() {
         if (halls.isEmpty()) {
             System.out.println("Список залов пуст.");
         } else {

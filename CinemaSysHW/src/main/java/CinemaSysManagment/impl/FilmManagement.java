@@ -3,11 +3,12 @@ package CinemaSysManagment.impl;
 import CinemaSysManagment.model.Film;
 import CinemaSysManagment.role.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class FilmManagement {
-    private List<Film> films;
+    private List<Film> films = new ArrayList<>();
     public static final String RED_COLOR = "\u001B[31m";
     public static final String RESET_COLOR = "\u001B[0m";
 

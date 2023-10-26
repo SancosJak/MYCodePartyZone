@@ -15,6 +15,8 @@ public class SessionManagement {
     private List<Film> films = new ArrayList<>();
     private List<Session> sessions = new ArrayList<>();
     private List<CinemaHall> cinemaHalls = new ArrayList<>();
+    public List<IFilm> availableFilms = getAvailableFilms();
+    public List<ICinemaHall> availableCinemaHalls = getAvailableCinemaHalls();
 
     public static final String RED_COLOR = "\u001B[31m";
     public static final String RESET_COLOR = "\u001B[0m";
@@ -37,8 +39,13 @@ public class SessionManagement {
     }
     public List<IFilm> getAvailableFilms() {
         List<IFilm> availableFilms = new ArrayList<>();
+
         if (films != null) {
-            availableFilms.addAll(films);
+            for (IFilm film : films) {
+                if (film instanceof Film) {
+                    availableFilms.add(film);
+                }
+            }
         }
         return availableFilms;
     }
@@ -81,8 +88,6 @@ public class SessionManagement {
             switch (adminSessionChoice) {
                 case 1:
                     try {
-                        List<IFilm> availableFilms = getAvailableFilms();
-                        List<ICinemaHall> availableCinemaHalls = getAvailableCinemaHalls();
                         addSession(availableFilms, availableCinemaHalls);
                     } catch (Exception e) {
                         System.out.println(RED_COLOR + "Ошибка при добавлении сеанса: " + e.getMessage() + RESET_COLOR);
@@ -117,36 +122,45 @@ public class SessionManagement {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Доступные фильмы:");
-        for (int i = 0; i < availableFilms.size(); i++) {
-            IFilm film = availableFilms.get(i);
-            System.out.println((i + 1) + ". " + film.getName());
+        int filmsPerLine = 5;
+        for (int i = 0; i < films.size(); i++) {
+            int j = i + 1;
+            System.out.print("#" + j + " " + films.get(i).getName() + " | ");
+            if ((i + 1) % filmsPerLine == 0) {
+                System.out.println();
+            }
         }
+        System.out.println();
 
         System.out.print("Введите номер выбранного фильма: ");
         int filmChoice = scanner.nextInt();
 
-        if (filmChoice < 1 || filmChoice > availableFilms.size()) {
+        if (filmChoice < 1 || filmChoice > films.size()) {
             System.out.println("Некорректный выбор фильма.");
             return;
         }
 
         System.out.println("Доступные кинозалы:");
-        for (int i = 0; i < availableCinemaHalls.size(); i++) {
-            ICinemaHall cinemaHall = availableCinemaHalls.get(i);
-            System.out.println((i + 1) + ". " + cinemaHall.getHallNumber());
+        for (int i = 0; i < cinemaHalls.size(); i++) {
+            int j = i + 1;
+            System.out.print("#" + j + " Кинозал " + cinemaHalls.get(i).getHallNumber() + " | ");
+            if ((i + 1) % filmsPerLine == 0) {
+                System.out.println();
+            }
         }
+        System.out.println();
 
         System.out.print("Введите номер выбранного кинозала: ");
         int cinemaHallChoice = scanner.nextInt();
         scanner.nextLine();
 
-        if (cinemaHallChoice < 1 || cinemaHallChoice > availableCinemaHalls.size()) {
+        if (cinemaHallChoice < 1 || cinemaHallChoice > cinemaHalls.size()) {
             System.out.println("Некорректный выбор кинозала.");
             return;
         }
 
-        IFilm film = availableFilms.get(filmChoice - 1);
-        ICinemaHall cinemaHall = availableCinemaHalls.get(cinemaHallChoice - 1);
+        IFilm film = films.get(filmChoice - 1);
+        ICinemaHall cinemaHall = cinemaHalls.get(cinemaHallChoice - 1);
 
         System.out.print("Введите время начала сеанса (например, '15:00'): ");
         String startTime = scanner.nextLine();
@@ -279,7 +293,7 @@ public class SessionManagement {
             System.out.println("Список всех сеансов:");
             for (int i = 0; i < sessions.size(); i++) {
                 ISession session = sessions.get(i);
-                System.out.println((i + 1) + ". " + session.getFilm().getName() + " (" + session.getStartTime() + " - " + session.getEndTime() + ")");
+                System.out.println((i + 1) + ". " + session.getFilm().getName() + ", " + session.getCinemaHall().getHallNumber() +" ( " + session.getStartTime() + " - " + session.getEndTime() + ")");
             }
         }
     }

@@ -15,6 +15,11 @@ public class AdminMenu {
 
     public static final String RED_COLOR = "\u001B[31m";
     public static final String RESET_COLOR = "\u001B[0m";
+    public List<Film> films = new ArrayList<>();
+    public List<CinemaHall> halls = new ArrayList<>();
+    public List<Session> sessions = new ArrayList<>();
+    public List<IEmployee> employees = new ArrayList<>();
+    public List<Product> products = new ArrayList<>();
 
     public boolean authenticate() {
         boolean authenticated = false;
@@ -64,17 +69,14 @@ public class AdminMenu {
 
             switch (adminChoice) {
                 case 1:
-                    List<Film> films = new ArrayList<>();
                     FilmManagement filmManagement = new FilmManagement(films);
                     filmManagement.run();
                     break;
                 case 2:
-                    List<Session> sessions = new ArrayList<>();
-                    SessionManagement sessionManagement = new SessionManagement(sessions);
+                    SessionManagement sessionManagement = new SessionManagement(sessions, films, halls);
                     sessionManagement.run();
                     break;
                 case 3:
-                    List<Product> products = new ArrayList<>();
                     ProductManagement productManagement = new ProductManagement(products);
                     productManagement.run();
                     break;
@@ -84,12 +86,10 @@ public class AdminMenu {
                     reportGeneration.run();
                     break;
                 case 5:
-                    List<CinemaHall> halls = new ArrayList<>();
                     HallManagement hallManagement = new HallManagement(halls);
                     hallManagement.run();
                     break;
                 case 6:
-                    List<IEmployee> employees = new ArrayList<>();
                     EmployeeManagement employeeManagement = new EmployeeManagement(employees);
                     employeeManagement.run();
                     break;

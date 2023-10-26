@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SessionManagement {
-    private List<Film> films;
-    private List<Session> sessions;
-    private List<CinemaHall> cinemaHalls;
+    private List<Film> films = new ArrayList<>();
+    private List<Session> sessions = new ArrayList<>();
+    private List<CinemaHall> cinemaHalls = new ArrayList<>();
 
     public static final String RED_COLOR = "\u001B[31m";
     public static final String RESET_COLOR = "\u001B[0m";

@@ -18,21 +18,20 @@ public class Knapsack {
     }
 
     public static int knapSack(int W, int[] w, int[] v, int n) {
-        int[][] dp = new int[n + 1][W + 1];
-
-        // Заполняем массив dp снизу вверх
+        int[][] maxFull = new int[n + 1][W + 1];
+        
         for (int i = 0; i <= n; i++) {
             for (int weight = 0; weight <= W; weight++) {
                 if (i == 0 || weight == 0) {
-                    dp[i][weight] = 0;
+                    maxFull[i][weight] = 0;
                 } else if (w[i - 1] <= weight) {
-                    dp[i][weight] = Math.max(v[i - 1] + dp[i - 1][weight - w[i - 1]], dp[i - 1][weight]);
+                    maxFull[i][weight] = Math.max(v[i - 1] + maxFull[i - 1][weight - w[i - 1]], maxFull[i - 1][weight]);
                 } else {
-                    dp[i][weight] = dp[i - 1][weight];
+                    maxFull[i][weight] = maxFull[i - 1][weight];
                 }
             }
         }
 
-        return dp[n][W];
+        return maxFull[n][W];
     }
 }
